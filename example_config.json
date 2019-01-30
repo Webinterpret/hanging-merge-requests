@@ -1,0 +1,15 @@
+{
+    "team-a": {
+        "channel": "#team-a",
+        "projects": [
+            "namespace/project-name-1",
+            "namespace/project-name-2"
+        ]
+    },
+    "john.doe": {
+        "channel": "@john.doe",
+        "projects": [
+            "tools/hanging-merge-requests"
+        ]
+    }
+}
