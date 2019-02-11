@@ -72,4 +72,10 @@ def notify_about_hanging_merge_requests(config: dict, repo: Repo, slack_hook_url
         'channel': channel,
 
     }
+
+    if len(payload['text']) == 0:
+        print(f'Payload for {channel} has zero-length')
+        return
+
+    print(f'Sending notification to {channel}:\n\n{payload}\n\n')
     requests.post(slack_hook_url, data={'payload': json.dumps(payload)})
