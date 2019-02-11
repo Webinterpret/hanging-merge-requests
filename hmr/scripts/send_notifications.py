@@ -10,11 +10,15 @@ def main():
     parser.add_argument('--gitlab-url', required=True)
     parser.add_argument('--gitlab-private-token', required=True)
     parser.add_argument('--slack-hook-url', required=True)
+    parser.add_argument('--team', nargs='+', required=False)
     args = parser.parse_args()
 
     repo = get_repo(args.gitlab_url, args.gitlab_private_token)
     cfg = config.read(args.config_path)
     teams = cfg.keys()
+
+    if args.team:
+        teams = list(set(args.team) & set(teams))
 
     for team in teams:
         try:
