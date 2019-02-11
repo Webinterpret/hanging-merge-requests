@@ -3,7 +3,7 @@ from setuptools import find_packages
 
 setup(
     name='hanging-merge-requests',
-    version='1.0-rc1',
+    version='1.0-rc2',
     packages=find_packages(include=('hmr*', )),
     include_package_data=True,
     install_requires=open('requirements.txt').read(),

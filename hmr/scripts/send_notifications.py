@@ -20,6 +20,8 @@ def main():
     if args.team:
         teams = list(set(args.team) & set(teams))
 
+    print(f'Teams to be notified: {", ".join(teams)}')
+
     for team in teams:
         try:
             notify_about_hanging_merge_requests(cfg[team], repo, args.slack_hook_url)
