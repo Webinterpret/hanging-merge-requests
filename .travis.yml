@@ -1,0 +1,23 @@
+dist: xenial
+language: python
+python:
+- '3.5'
+- '3.6'
+- '3.7'
+- 3.8-dev
+- pypy3.5
+- nightly
+install:
+- pip install -r requirements.txt
+- pip install -e .
+script:
+- echo 1
+deploy:
+  on:
+    tags: true
+  provider: pypi
+  distributions: "sdist bdist_wheel"
+  skip_existing: true
+  user: matee.net
+  password:
+    secure: g4sUZBF8wRQsK+2wZeYjQqQeG9AKXvYt8x58MzwQ3Ja0SjPJEG3wazmdsx2w/WU4xv19EMYW8bYwAQ1AaJjnj7+vpulh61YnVrbZETq441Rb3SCpFVxkMmHXVs2/aAHj5XPSPqdaYeBM2hX01tVN+vKGfDyZZjBy343fRsPFXOq06fWvsheg5lvCzmB+T+QBmV08uPvDzgymH9mVlCUOVfQi1/O8lKaUqHzgJo9/QVb/RXqzgDsKTJER7u395alPJSvoDvfqUH2UEkC9zXCT/3gPKANtnAXBjg3+SZ9jBZiqSMoK5d2gDI9f/wFfuV5eK9OT1IDET2Ap0qHpi8qxk1TA8e8485+CHM0GRdlv1bqV3kEL0r6pmwtgAmRNoArHmr4RRBhQqG3CsH/euhpmZH1gcw3DngOxM2MerwRkSN+gfn2dARv4e5nU4BfhNWBhbpqX2/HRMHprOnL25qnNvpzi2qvevD7rJlxZGzPfE2vaYLwCIggNO8rEbdsmefUKiIAdPGPbrYCAF+/LBGqeiHWHmDN2J5R8OnkzSGpH5MMvk5orPva3znvsy3G78TelP/UtPJR0TcK3ZzNOAGTNL5oVzq9x7D8rp8/H9rgBd3FSQgIpEybsj0qqFATHGv8BOc/UCrUxLI2JvQOb922QSoLWWWijwbwp23BGgMI8nQE=

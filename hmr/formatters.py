@@ -4,7 +4,7 @@ import typing
 
 from hmr.models import ProjectWithMRs
 
-DAY = 24*3600
+DAY = 24 * 3600
 
 
 def format_project_header(project) -> str:
@@ -68,7 +68,7 @@ def pipeline_emoji(mr) -> str:
 def zombie_emoji(mr) -> str:
     last_activity = arrow.get(mr.updated_at or mr.created_at)
     emoji = ':female_zombie: ' if is_girl(mr.author['name']) else ':male_zombie: '
-    emoji = emoji if (arrow.get() - last_activity).total_seconds() > 10*DAY else ''
+    emoji = emoji if (arrow.get() - last_activity).total_seconds() > 10 * DAY else ''
     return emoji
 
 
@@ -81,9 +81,9 @@ def shipit_emoji(mr) -> str:
 
 
 def format_mr(mr) -> str:
-    l = link(mr.web_url, f'!{mr.iid} {mr.title}')
+    lnk = link(mr.web_url, f'!{mr.iid} {mr.title}')
     last_activity = arrow.get(mr.updated_at or mr.created_at)
-    return f'- {l} {shipit_emoji(mr)}{votes_emoji(mr)}{discussion_emoji(mr)}{zombie_emoji(mr)}(Merge status: {merge_emoji(mr)}; Tests: {pipeline_emoji(mr)}) by {mr.author["name"]} updated {last_activity.humanize()}\n'
+    return f'- {lnk} {shipit_emoji(mr)}{votes_emoji(mr)}{discussion_emoji(mr)}{zombie_emoji(mr)}(Merge status: {merge_emoji(mr)}; Tests: {pipeline_emoji(mr)}) by {mr.author["name"]} updated {last_activity.humanize()}\n'
 
 
 def format_payload(projects: typing.List[ProjectWithMRs]) -> str:
@@ -102,7 +102,7 @@ def format_payload(projects: typing.List[ProjectWithMRs]) -> str:
             deltas.append((now - arrow.get(mr.updated_at or mr.created_at)).total_seconds())
 
     if deltas:
-        avg_time = sum(deltas)/len(deltas)
+        avg_time = sum(deltas) / len(deltas)
         payload += '\n'
         payload += f':stopwatch: {len(deltas)} MRs in {projects_count} projects; Average age {humanize.naturaldelta(avg_time)}. The oldest MR: {humanize.naturaldelta(max(deltas))}'
 
