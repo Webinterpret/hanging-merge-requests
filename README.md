@@ -27,3 +27,11 @@ Usage
 -----
 
     send-notifications --config-path ../config.json --slack-hook-url $SLACK_HOOK_URL --gitlab-url $GITLAB_URL --gitlab-private-token $GITLAB_PRIVATE_TOKEN --team $TEAM
+
+Deploy
+------
+
+First bump version in setup.py in master branch via merge request. Afterwards push a version tag and wait.
+
+    git tag 1.0.0
+    git push --tags
