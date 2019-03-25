@@ -1,6 +1,7 @@
 Hanging Merge Requests
 ======================
 
+![License](https://img.shields.io/github/license/Webinterpret/hanging-merge-requests.svg)
 ![Languages](https://img.shields.io/github/languages/top/Webinterpret/hanging-merge-requests.svg)
 
 Emojiful daily summaries of open merge requests directly in your Slack.
