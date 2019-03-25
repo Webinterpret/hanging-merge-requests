@@ -6,7 +6,7 @@ Hanging Merge Requests
 
 Emojiful daily summaries of open merge requests directly in your Slack.
 
-![Example summary](docs/demo.png?raw=true "Example summary")
+![Example summary](https://github.com/Webinterpret/hanging-merge-requests/blob/master/docs/demo.png?raw=true "Example summary")
 
 Create you own configuration file with your team, channel and projects as shown in [example_config.json](example_config.json).
 
