@@ -12,7 +12,7 @@ def read_file(filename):
 
 setup(
     name='hanging-merge-requests',
-    version='1.0.2rc3',
+    version='1.0.2',
     packages=find_packages(include=('hmr*', )),
     include_package_data=True,
     description='Emojiful daily summaries of open merge requests directly in your Slack',
