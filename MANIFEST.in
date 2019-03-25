@@ -6,3 +6,5 @@ include requirements.txt
 include .travis.yml
 
 global-exclude *.py[cod] __pycache__ *.so *.dylib
+
+include hmr/*
