@@ -1,8 +1,12 @@
 Hanging Merge Requests
 ======================
 
+![Version](https://img.shields.io/pypi/v/hanging-merge-requests.svg)
 ![License](https://img.shields.io/github/license/Webinterpret/hanging-merge-requests.svg)
 ![Languages](https://img.shields.io/github/languages/top/Webinterpret/hanging-merge-requests.svg)
+![Format](https://img.shields.io/pypi/format/hanging-merge-requests.svg)
+![Status](https://img.shields.io/pypi/status/hanging-merge-requests.svg)
+![Python Versions](https://img.shields.io/pypi/pyversions/hanging-merge-requests.svg)
 
 Emojiful daily summaries of open merge requests directly in your Slack.
 
